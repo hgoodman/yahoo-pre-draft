@@ -1,0 +1,76 @@
+<style>
+#pdr_clipboard {
+  background-color: #EEE;
+  padding: 3px;
+  padding-top: 6px;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+#pdr_header {
+  font-size: 15px;
+  width: 100%;
+  padding-left: 18px;
+  background-repeat: no-repeat;
+}
+#pdr_paste_bin {
+  margin-top: 6px;
+  height: 180px;
+  width: 100%;
+}
+.pdr_paste_bin_unfocused {
+  text-align: center;
+  padding-top: 70px;
+  color: #BBB;
+}
+#pdr_player_lists {
+  display: none;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+div.pdr_player_col {
+  float: left;
+  width: 20%;
+}
+div.pdr_player {
+  font-size: 11px;
+}
+span.pdr_player_found {
+  color: rgb(74, 176, 84);
+}
+span.pdr_player_not_found {
+  color: rgb(241, 110, 110);
+}
+#pdr_buttons {
+  margin-top: 2px;
+  text-align: right;
+}
+#pdr_done_message {
+  color: rgb(74, 176, 84);
+  font-size: 12px;
+}
+</style>
+<div id="pdr_clipboard">
+  <header id="pdr_header">Pre-Draft Rankings Clipboard</header>
+  <div>
+    <textarea id="pdr_paste_bin" class="pdr_paste_bin_unfocused" />
+  </div>
+  <div id="pdr_player_lists">
+    <div class="pdr_player_col" />
+    <div class="pdr_player_col" />
+    <div class="pdr_player_col" />
+    <div class="pdr_player_col" />
+    <div class="pdr_player_col" />
+    <br style="clear: left;" />
+  </div>
+  <div id="pdr_buttons">
+    <button class="Btn" id="pdr_expand_player_list">Expand "Default Player Rankings"</button>
+    <button class="Btn Btn-disabled" id="pdr_load_player_list" disabled="true">Next &gt;&gt;</button>
+    <button class="Btn" id="pdr_add_preferred_players" style="display: none;">Match player names with "Default Player Rankings"</button>
+  </div>
+  <p id="pdr_done_message" style="display:none;">
+    If the players above were queued correctly and you are happy with the draft
+    order, click "Save Changes" below. If any players were not found, check
+    the spelling of their names and make sure they appear in the "Default Player
+    Rankings" list below. Click "Reset" to try again.
+  </p>
+</div>

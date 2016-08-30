@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="img/icon32.png"
+   inkscape:export-xdpi="22.5"
+   inkscape:export-ydpi="22.5">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="57.231398"
+     inkscape:cy="59.738757"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1501"
+     inkscape:window-height="1112"
+     inkscape:window-x="956"
+     inkscape:window-y="118"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-924.36216)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:84.45599365px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6800b9;fill-opacity:0.35294118;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="7.4997954"
+       y="1316.0919"
+       id="text4136"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.2806787,0.33201515,0,0.78083595,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4138"
+         x="7.4997954"
+         y="1316.0919"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:168.9119873px;font-family:Impact;-inkscape-font-specification:'Impact Condensed';fill:#6800b9;fill-opacity:0.35294118">Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:83.72427368px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000d4;fill-opacity:0.5098038;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-2.1420877"
+       y="1031.3198"
+       id="text4140"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.99347394,-0.15217825,0,1.0065689,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4142"
+         x="-2.1420877"
+         y="1031.3198"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-family:Impact;-inkscape-font-specification:'Impact Condensed';fill:#0000d4;fill-opacity:0.5098038">PDR</tspan></text>
+  </g>
+</svg>
