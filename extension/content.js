@@ -115,11 +115,16 @@ $.get(chrome.extension.getURL("clipboard.html"), function (html) {
 
   function getAlternateSpelling(playerName) {
     switch (playerName) {
+      // The football alternate spellings
       case "Ben Watson":      return "Benjamin Watson";
       case "William Fuller":  return "Will Fuller";
       case "Steve Johnson":   return "Stevie Johnson";
       case "Mycole Pruitt":   return "MyCole Pruitt";
       case "Philly Brown":    return "Corey Brown";
+      
+      // The hockey alternate spellings
+      case "TJ Brodie":                  return "T.J. Brodie";
+      case "Pierre-Alexandre Parenteau": return "Pierre-Alexandr Parenteau";
     }
     return null;
   }
