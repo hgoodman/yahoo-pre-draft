@@ -125,6 +125,9 @@ $.get(chrome.extension.getURL("clipboard.html"), function (html) {
       // The hockey alternate spellings
       case "TJ Brodie":                  return "T.J. Brodie";
       case "Pierre-Alexandre Parenteau": return "Pierre-Alexandr Parenteau";
+
+     // The baseball alternate spellings
+     case "Edwin Encarnacion":          return "Edwin Encarnación";
     }
     return null;
   }
