@@ -128,6 +128,69 @@ $.get(chrome.extension.getURL("clipboard.html"), function (html) {
 
      // The baseball alternate spellings
      case "Edwin Encarnacion":          return "Edwin Encarnación";
+     case "Gregory Polanco":    return "Grégory Polanco";
+     case "Yoenis Cespedes":    return "Yoenis Céspedes";
+     case "Carlos Gonzalez":    return "Carlos González";
+     case "Jose Ramirez":    return "José Ramírez";
+     case "Adrian Beltre":    return "Adrián Béltre";
+     case "J.D. Martinez":    return "J.D. Martínez";
+     case "Robinson Cano":    return "Robinson Canó";
+     case "Anthony Rendon":    return "Anthony Rendón";
+     case "Hanley Ramirez":    return "Hanley Ramírez";
+     case "Jose Bautista":    return "José Bautista";
+     case "Jose Abreu":    return "José Abreu";
+     case "Eduardo Nunez":    return "Eduardo Núñez";
+     case "Martin Prado":    return "Martín Prado";
+     case "Jose Altuve":    return "José Altuve";
+     case "Gary Sanchez":    return "Gary Sánchez";
+     case "Shin-Soo Choo":    return "Shin-soo Choo";
+     case "Cesar Hernandez":    return "César Hernández";
+     case "Yasmany Tomas":    return "Yasmany Tomás";
+     case "Jose Reyes":    return "José Reyes";
+     case "Carlos Gomez":    return "Carlos Gómez";
+     case "Carlos Beltran":    return "Carlos Beltrán"
+     case "Adrian Gonzalez":    return "Adrián González";
+     case "Angel Pagan":    return "Ángel Pagán";
+     case "Jose Peraza":    return "José Peraza";
+     case "Eugenio Suarez":    return "Eugenio Suárez";
+     case "Victor Martinez":    return "Víctor Martínez";
+     case "Nori Aoki":    return "Norichika Aoki";
+     case "Gregory Bird":    return "Greg Bird";
+     case "Yulieski Gurriel":    return "Yuli Gurriel";
+     case "Javier Baez":    return "Javier Báez";
+     
+     case "Carlos Martinez":    return "Carlos Martínez";
+     case "Edwin Diaz":    return "Edwin Díaz";
+     case "Aaron Sanchez":    return "Aarón Sánchez";
+     case "Julio Urías":    return "Julio Urías"; 
+     case "Pedro Baez":     return "Pedro Báez";
+     case "Jose Quintana":    return "José Quintana";
+     case "Julio Teheran":    return "Julio Teherán";
+     case "Joaquin Benoit":    return "Joaquín Benoit";
+     case "Hector Rondon":    return "Héctor Rondón";
+     case "Xavier Cedeno":    return "Xavier Cedeño";
+     case "Francisco Rodriguez":    return "Francisco Rodríguez";
+     case "Fernando Rodriguez":    return "Fernando Rodríguez";
+     case "Alex Colome":    return "Álex Colomé";
+     case "Hector Neris":    return "Héctor Neris"; 
+     case "Felix Hernandez":    return "Félix Hernández"; 
+     case "Joseph Biagini":    return "Joe Biagini"; 
+     case "Alex Claudio":    return "Álex Cláudio";
+     case "Vince Velasquez":    return "Vince Velásquez"; 
+     case "Junior Guerra":     return "Júnior Guerra";
+     case "Jaime Garcia":    return "Jaime García";
+     case "Ivan Nova":    return "Iván Nova";
+     case "Arodys Vizcaino":    return "Arodys Vizcaíno";
+     case "Erasmo Ramirez":    return "Erasmo Ramírez";
+     case "Jose De Leon":    return "José De León";
+     case "Eduardo Rodriguez":    return "Eduardo Rodríguez";
+     case "Bartolo Colon":    return "Bartolo Colón";
+     case "Gio Gonzalez":    return "Gio González";
+     case "Julio Urias":    return "Julio Urías";
+     case "Christopher Devenski":    return "Chris Devenski";
+     case "Rafael Martin":    return "Rafael Martín";
+     case "Daniel Winkler":    return "Dan Winkler";
+          
     }
     return null;
   }
