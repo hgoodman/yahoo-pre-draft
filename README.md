@@ -1,5 +1,5 @@
-Pre-Draft Rankings Clipboard for Yahoo Fantasy Sports 2016
-------------------------------------------------------------
+Pre-Draft Rankings Clipboard for Yahoo Fantasy Sports
+-----------------------------------------------------
 
 Tired of manually selecting preferred players for your fantasy sports draft? This extension lets you copy and paste player names from your custom cheatsheet and load them into the Yahoo pre-draft interface. Here's how it works:
 
