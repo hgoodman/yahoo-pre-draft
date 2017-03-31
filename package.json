@@ -1,0 +1,12 @@
+{
+  "name": "yahoo-pre-draft",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hgoodman/yahoo-pre-draft.git"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
