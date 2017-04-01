@@ -1,5 +1,4 @@
-Pre-Draft Rankings Clipboard for Yahoo Fantasy Sports
------------------------------------------------------
+## Pre-Draft Rankings Clipboard for Yahoo Fantasy Sports
 
 Tired of manually selecting preferred players for your fantasy sports draft? This extension lets you copy and paste player names from your custom cheatsheet and load them into the Yahoo pre-draft interface. Here's how it works:
 
@@ -11,3 +10,17 @@ Source code is available at:
 github.com/hgoodman/yahoo-pre-draft
 
 This is a third-party extension, not supported by Yahoo!
+
+## Releases
+
+### 0.1.0
+* First release for fantasy football
+
+### 0.2.0
+* Add support for Yahoo fantasy sports other than football
+* Add alternate spellings for a couple hockey players and several baseball players
+* Improve player name matching:
+  * Convert accented characters with diacritics to ASCII equivalents
+  * Treat hyphens as spaces
+  * Ignore case
+* Add gulpfile and spec tests
