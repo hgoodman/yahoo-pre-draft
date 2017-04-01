@@ -7,6 +7,10 @@
     "url": "https://github.com/hgoodman/yahoo-pre-draft.git"
   },
   "devDependencies": {
+    "fs-extra": "^2.1.2",
+    "gulp": "^3.9.1",
+    "gulp-jasmine": "^2.4.2",
+    "gulp-zip": "^4.0.0",
     "jasmine": "^2.5.3"
   }
 }

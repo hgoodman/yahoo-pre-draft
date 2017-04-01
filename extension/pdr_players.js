@@ -4,12 +4,12 @@ var PDRPlayers = (function () {
 
   var asciiToDiacritic = {
     'A':  'ÀÁÂÄÃÅĀ',          'AE': 'Æ',
-    'C':  'ÇĆČ',              'E':  'ÈÉÊËĒĖĘE',
+    'C':  'ÇĆČ',              'E':  'ÈÉÊËĒĖĘ',
     'I':  'ÎÏÍĪĮÌ',           'L':  'Ł',
     'N':  'ÑŃ',               'O':  'ÔÖÒÓØŌÕ',
     'OE': 'Œ',                'S':  'ŚŠ',
     'U':  'ÛÜÙÚŪ',            'Y':  'Ÿ',
-    'Z':  'ŽŹŻ',              'a':  'àáâäãåa',
+    'Z':  'ŽŹŻ',              'a':  'àáâäãå',
     'ae': 'æ',                'c':  'çćč',
     'e':  'èéêëēėę',          'i':  'îïíīįì',
     'l':  'ł',                'n':  'ñń',
@@ -34,8 +34,8 @@ var PDRPlayers = (function () {
   };
 
   PDRPlayers.namesMatch = function (n0, n1) {
-    n0 = asciiFold(n0.toLocaleLowerCase());
-    n1 = asciiFold(n1.toLocaleLowerCase());
+    n0 = asciiFold(n0).toLowerCase().replace('-', ' ');
+    n1 = asciiFold(n1).toLowerCase().replace('-', ' ');
     return n0.startsWith(n1) || n1.startsWith(n0);
   };
 

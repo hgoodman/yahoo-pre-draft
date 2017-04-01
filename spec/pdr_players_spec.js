@@ -38,5 +38,12 @@ describe('PDRPlayers', function () {
       var n1 = 'Jacob deGrom';
       expect(PDRPlayers.namesMatch(n0, n1)).toBe(true);
     });
+
+    it('equates hyphens with spaces when performing a comparison', function () {
+      var n0 = 'Seung-Hwan Oh';
+      var n1 = 'Seung Hwan Oh';
+      expect(PDRPlayers.namesMatch(n0, n1)).toBe(true);
+      expect(PDRPlayers.namesMatch(n1, n0)).toBe(true);
+    });
   });
 });
