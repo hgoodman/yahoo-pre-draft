@@ -1,7 +1,5 @@
 
 var PDRPlayers = (function () {
-  var PDRPlayers = function () { }
-
   var asciiToDiacritic = {
     'A':  'ÀÁÂÄÃÅĀ',          'AE': 'Æ',
     'C':  'ÇĆČ',              'E':  'ÈÉÊËĒĖĘ',
@@ -17,13 +15,13 @@ var PDRPlayers = (function () {
     's':  'śš',               'ss': 'ß',
     'u':  'ûüùúū',            'y':  'ÿ',
     'z':  'žźż'
-  }
+  };
 
   var asciiLookup = { };
   for (var ascii in asciiToDiacritic) {
     var diacritic = asciiToDiacritic[ascii];
     for (var i = 0; i < diacritic.length; i++) {
-      asciiLookup[diacritic[i]] = ascii
+      asciiLookup[diacritic[i]] = ascii;
     }
   }
 
@@ -33,15 +31,17 @@ var PDRPlayers = (function () {
     });
   };
 
-  PDRPlayers.namesMatch = function (n0, n1) {
-    n0 = asciiFold(n0).toLowerCase().replace('-', ' ');
-    n1 = asciiFold(n1).toLowerCase().replace('-', ' ');
-    return n0.startsWith(n1) || n1.startsWith(n0);
+  return {
+    namesMatch: function (n0, n1) {
+      n0 = asciiFold(n0).toLowerCase().replace('-', ' ');
+      n1 = asciiFold(n1).toLowerCase().replace('-', ' ');
+      return n0.startsWith(n1) || n1.startsWith(n0);
+    }
   };
-
-  return PDRPlayers;
 })();
 
 if (typeof module !== 'undefined') {
   module.exports = PDRPlayers;
 }
+
+/* eslint guard-for-in: 0 */

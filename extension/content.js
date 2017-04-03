@@ -107,7 +107,7 @@ $.get(chrome.extension.getURL("clipboard.html"), function (html) {
     var playerIds = [];
     playerList.each(function (index) {
       var playerIdDiv = $(this).find("span").eq(0).find("div").eq(0);
-      var id = playerIdDiv.attr("data-playerid")
+      var id = playerIdDiv.attr("data-playerid");
       if (id) playerIds.push(id);
     });
     return playerIds.join();
@@ -208,3 +208,5 @@ $.get(chrome.extension.getURL("clipboard.html"), function (html) {
     }, 30);
   });
 });
+
+/* eslint max-len: ["error", 100], quotes: 0 */

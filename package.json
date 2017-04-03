@@ -7,10 +7,47 @@
     "url": "https://github.com/hgoodman/yahoo-pre-draft.git"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
     "fs-extra": "^2.1.2",
     "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
     "gulp-jasmine": "^2.4.2",
     "gulp-zip": "^4.0.0",
     "jasmine": "^2.5.3"
+  },
+  "eslintConfig": {
+    "extends": "google",
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "rules": {
+      "comma-dangle": "off",
+      "key-spacing": [
+        "error",
+        {
+          "mode": "minimum"
+        }
+      ],
+      "no-multi-spaces": [
+        "error",
+        {
+          "exceptions": {
+            "ObjectExpression": true,
+            "SwitchCase": true
+          }
+        }
+      ],
+      "no-var": "off",
+      "require-jsdoc": "off",
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "always",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ]
+    }
   }
 }
