@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/hgoodman/yahoo-pre-draft.svg?branch=master)](https://travis-ci.org/hgoodman/yahoo-pre-draft)
+[![Chrome Extension](https://img.shields.io/badge/chrome-extension-blue.svg)](https://chrome.google.com/webstore/detail/pre-draft-rankings-for-ya/lopaeiabeananjanjciigpdemchnmona)
+
 ## Pre-Draft Rankings Clipboard for Yahoo Fantasy Sports
 
 Tired of manually selecting preferred players for your fantasy sports draft? This extension lets you copy and paste player names from your custom cheatsheet and load them into the Yahoo pre-draft interface. Here's how it works:
