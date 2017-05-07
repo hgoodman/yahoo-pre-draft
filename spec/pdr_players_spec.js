@@ -46,4 +46,10 @@ describe('PDRPlayers', function () {
       expect(PDRPlayers.namesMatch(n1, n0)).toBe(true);
     });
   });
+
+  describe('getAlternateSpelling()', function () {
+    it('returns null for unrecognized names', function () {
+      expect(PDRPlayers.getAlternateSpelling('Nonexistent')).toBe(null);
+    });
+  });
 });
