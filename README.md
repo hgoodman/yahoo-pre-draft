@@ -27,3 +27,6 @@ This is a third-party extension, not supported by Yahoo!
   * Treat hyphens as spaces
   * Ignore case
 * Add gulpfile and spec tests
+
+### 0.2.1
+* Overhaul name matching system to account for alternate spellings of common first names
