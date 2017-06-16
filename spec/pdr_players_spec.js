@@ -9,6 +9,11 @@ describe('PDRPlayers', function () {
       expect(PDRPlayers.namesMatch(name, 'Mookie Betts')).toBe(false);
     });
 
+    it('will match the same name when it contains diacritics', function () {
+      var name = 'José Altuve';
+      expect(PDRPlayers.namesMatch(name, name)).toBe(true);
+    });
+
     it('will match on just the first part of a name', function () {
       var n0 = 'Robert Griffin';
       var n1 = 'Robert Griffin III';

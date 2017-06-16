@@ -68,8 +68,7 @@ var PDRPlayers = (function () {
 
   var nameToRegex = function (name) {
     if (!nameRegexes[name]) {
-      var pattern = asciiFold(name);
-      pattern = pattern.replace(/([\-\.])/g, '[ \\$1]?');
+      var pattern = name.replace(/([\-\.])/g, '[ \\$1]?');
       var matched = false;
       for (var f of firstNamePatterns) {
         if (pattern.match(f)) {
@@ -88,6 +87,8 @@ var PDRPlayers = (function () {
 
   return {
     namesMatch: function (n0, n1) {
+      n0 = asciiFold(n0);
+      n1 = asciiFold(n1);
       if (n0.match(nameToRegex(n1))) {
         return true;
       }
