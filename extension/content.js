@@ -133,9 +133,6 @@ $.get(chrome.extension.getURL("clipboard.html"), function (html) {
         var div = playerDivs.shift();
         var playerName = $(div).find("span").eq(1).text();
         var playerId = fetchPlayerId(playerName);
-        if (!playerId && PDRPlayers.getAlternateSpelling(playerName)) {
-          playerId = fetchPlayerId(PDRPlayers.getAlternateSpelling(playerName));
-        }
         if (playerId) {
           $(div).append(" - <span class=\"pdr_player_found\">Queued</span>");
           myPlayerIds.push(playerId);

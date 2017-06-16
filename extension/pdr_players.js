@@ -31,52 +31,70 @@ var PDRPlayers = (function () {
     });
   };
 
+  var firstNamePatterns = [
+    /^Alex(ander)? /i,
+    /^Ben(jamin)? /i,
+    /^Cam(eron)? /i,
+    /^Chris(topher)? /i,
+    /^Dan(iel)? /i,
+    /^Dav(e|id) /i,
+    /^Greg(ory)? /i,
+    /^Jo(e|seph) /i,
+    /^Jon(athan)? /i,
+    /^Josh(ua)? /i,
+    /^Ken(neth)? /i,
+    /^Matt(hew)? /i,
+    /^Mi(ke|chael) /i,
+    /^Mitch(ell)? /i,
+    /^Nic(k|holas) /i,
+    /^Nori(chika)? /i,
+    /^Rob(ert)? /i,
+    /^Ste(vi?e|phen) /i,
+    /^Vince(nt)? /i,
+    /^Wil(l(iam)?)? /i,
+    /^Yuli(eski)? /i
+  ];
+
+  // These manually-created regular expressions supercede the alternate
+  // spellings that used to be here. Regexes that just involve fuzzing common
+  // first names or dealing with punctuation will be automatically generated.
+  var nameRegexes = {
+    'Corey Brown':                /^(Corey|Philly) Brown/i,
+    'Pierre-Alexandr Parenteau':  /^Pierre-Alexandre? Parenteau/i,
+    'Carl Edwards Jr.':           /^(Carl|C\.J\.) Edwards( Jr\.)?/i,
+    'Raul Mondesi':               /^Raul (Adalberto )?Mondesi/i,
+    'Michael A. Taylor':          /^Michael (A\. )?Taylor/i
+  };
+
+  var nameToRegex = function (name) {
+    if (!nameRegexes[name]) {
+      var pattern = asciiFold(name);
+      pattern = pattern.replace(/([\-\.])/g, '[ \\$1]?');
+      var matched = false;
+      for (var f of firstNamePatterns) {
+        if (pattern.match(f)) {
+          pattern = pattern.replace(f, f.source);
+          matched = true;
+          break;
+        }
+      }
+      if (!matched) {
+        pattern = '^' + pattern;
+      }
+      nameRegexes[name] = new RegExp(pattern, 'i');
+    }
+    return nameRegexes[name];
+  };
+
   return {
     namesMatch: function (n0, n1) {
-      n0 = asciiFold(n0).toLowerCase().replace('-', ' ');
-      n1 = asciiFold(n1).toLowerCase().replace('-', ' ');
-      return n0.startsWith(n1) || n1.startsWith(n0);
-    },
-
-    getAlternateSpelling: function (playerName) {
-      switch (playerName) {
-        // The football alternate spellings
-        case 'Ben Watson':                  return 'Benjamin Watson';
-        case 'William Fuller':              return 'Will Fuller';
-        case 'Steve Johnson':               return 'Stevie Johnson';
-        case 'Philly Brown':                return 'Corey Brown';
-
-        // The hockey alternate spellings
-        case 'TJ Brodie':                   return 'T.J. Brodie';
-        case 'Pierre-Alexandre Parenteau':  return 'Pierre-Alexandr Parenteau';
-
-        // The baseball alternate spellings
-        case 'Alexander Colome':            return 'Alex Colome';
-        case 'A.J. Ramos':                  return 'AJ Ramos';
-        case 'Kenneth Giles':               return 'Ken Giles';
-        case 'Nori Aoki':                   return 'Norichika Aoki';
-        case 'Gregory Bird':                return 'Greg Bird';
-        case 'Yulieski Gurriel':            return 'Yuli Gurriel';
-        case 'Joseph Biagini':              return 'Joe Biagini';
-        case 'Christopher Devenski':        return 'Chris Devenski';
-        case 'Daniel Winkler':              return 'Dan Winkler';
-        case 'Jonathan Gray':               return 'Jon Gray';
-        case 'Vincent Velasquez':           return 'Vince Velasquez';
-        case 'Nick Castellanos':            return 'Nicholas Castellanos';
-        case 'Cameron Bedrosian':           return 'Cam Bedrosian';
-        case 'Michael Foltynewicz':         return 'Mike Foltynewicz';
-        case 'Daniel Straily':              return 'Dan Straily';
-        case 'C.J. Edwards':                return 'Carl Edwards Jr.';
-        case 'Raul Adalberto Mondesi':      return 'Raul Mondesi';
-        case 'Matt Boyd':                   return 'Matthew Boyd';
-        case 'Byung-ho Park':               return 'ByungHo Park';
-        case 'Matthew Strahm':              return 'Matt Strahm';
-        case 'A.J. Reed':                   return 'AJ Reed';
-        case 'Dan Vogelbach':               return 'Daniel Vogelbach';
-        case 'Matthew Wisler':              return 'Matt Wisler';
-        case 'Michael Taylor':              return 'Michael A. Taylor';
+      if (n0.match(nameToRegex(n1))) {
+        return true;
       }
-      return null;
+      if (n1.match(nameToRegex(n0))) {
+        return true;
+      }
+      return false;
     }
   };
 })();

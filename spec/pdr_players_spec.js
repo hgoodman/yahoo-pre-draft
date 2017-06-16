@@ -45,11 +45,51 @@ describe('PDRPlayers', function () {
       expect(PDRPlayers.namesMatch(n0, n1)).toBe(true);
       expect(PDRPlayers.namesMatch(n1, n0)).toBe(true);
     });
-  });
 
-  describe('getAlternateSpelling()', function () {
-    it('returns null for unrecognized names', function () {
-      expect(PDRPlayers.getAlternateSpelling('Nonexistent')).toBe(null);
+    it('matches alternate spellings', function () {
+      var namePairs = [
+        // The football alternate spellings
+        ['Ben Watson',                  'Benjamin Watson'],
+        ['William Fuller',              'Will Fuller'],
+        ['Steve Johnson',               'Stevie Johnson'],
+        ['Philly Brown',                'Corey Brown'],
+
+        // The hockey alternate spellings
+        ['TJ Brodie',                   'T.J. Brodie'],
+        ['Pierre-Alexandre Parenteau',  'Pierre-Alexandr Parenteau'],
+
+        // The baseball alternate spellings
+        ['Alexander Colome',            'Alex Colome'],
+        ['A.J. Ramos',                  'AJ Ramos'],
+        ['Kenneth Giles',               'Ken Giles'],
+        ['Nori Aoki',                   'Norichika Aoki'],
+        ['Gregory Bird',                'Greg Bird'],
+        ['Yulieski Gurriel',            'Yuli Gurriel'],
+        ['Joseph Biagini',              'Joe Biagini'],
+        ['Christopher Devenski',        'Chris Devenski'],
+        ['Daniel Winkler',              'Dan Winkler'],
+        ['Jonathan Gray',               'Jon Gray'],
+        ['Vincent Velasquez',           'Vince Velasquez'],
+        ['Nick Castellanos',            'Nicholas Castellanos'],
+        ['Cameron Bedrosian',           'Cam Bedrosian'],
+        ['Michael Foltynewicz',         'Mike Foltynewicz'],
+        ['Daniel Straily',              'Dan Straily'],
+        ['C.J. Edwards',                'Carl Edwards Jr.'],
+        ['Raul Adalberto Mondesi',      'Raul Mondesi'],
+        ['Matt Boyd',                   'Matthew Boyd'],
+        ['Byung-ho Park',               'ByungHo Park'],
+        ['Matthew Strahm',              'Matt Strahm'],
+        ['A.J. Reed',                   'AJ Reed'],
+        ['Dan Vogelbach',               'Daniel Vogelbach'],
+        ['Matthew Wisler',              'Matt Wisler'],
+        ['Michael Taylor',              'Michael A. Taylor']
+      ];
+      for (var n of namePairs) {
+        expect(PDRPlayers.namesMatch(n[0], n[1])).toBe(true);
+        expect(PDRPlayers.namesMatch(n[1], n[0])).toBe(true);
+      }
     });
   });
 });
+
+/* eslint no-multi-spaces: 0 */
