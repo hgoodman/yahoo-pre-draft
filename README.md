@@ -30,3 +30,6 @@ This is a third-party extension, not supported by Yahoo!
 
 ### 0.2.1
 * Overhaul name matching system to account for alternate spellings of common first names
+
+### 0.2.2
+* Fix bug introduced in 0.2.1
