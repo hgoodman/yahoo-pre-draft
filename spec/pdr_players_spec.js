@@ -80,14 +80,20 @@ describe('PDRPlayers', function () {
         ['Michael Foltynewicz',         'Mike Foltynewicz'],
         ['Daniel Straily',              'Dan Straily'],
         ['C.J. Edwards',                'Carl Edwards Jr.'],
-        ['Raul Adalberto Mondesi',      'Raul Mondesi'],
+        ['Raul Adalberto Mondesi',      'Adalberto Mondesi'],
         ['Matt Boyd',                   'Matthew Boyd'],
         ['Byung-ho Park',               'ByungHo Park'],
         ['Matthew Strahm',              'Matt Strahm'],
         ['A.J. Reed',                   'AJ Reed'],
         ['Dan Vogelbach',               'Daniel Vogelbach'],
         ['Matthew Wisler',              'Matt Wisler'],
-        ['Michael Taylor',              'Michael A. Taylor']
+        ['Michael Taylor',              'Michael A. Taylor'],
+        ['Jacob Faria',                 'Jake Faria'],
+        ['Jake Junis',                  'Jakob Junis'],
+        ['Mychal Antonio Givens',       'Mychal Givens'],
+        ['Bradley Boxberger',           'Brad Boxberger'],
+        ['Nick Delmonico',              'Nicky Delmonico'],
+        ['Nathan Karns',                'Nate Karns']
       ];
       for (var n of namePairs) {
         expect(PDRPlayers.namesMatch(n[0], n[1])).toBe(true);

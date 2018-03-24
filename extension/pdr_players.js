@@ -34,11 +34,13 @@ var PDRPlayers = (function () {
   var firstNamePatterns = [
     /^Alex(ander)? /i,
     /^Ben(jamin)? /i,
+    /^Brad(ley)? /i,
     /^Cam(eron)? /i,
     /^Chris(topher)? /i,
     /^Dan(iel)? /i,
     /^Dav(e|id) /i,
     /^Greg(ory)? /i,
+    /^Ja(ke|[ck]ob) /i,
     /^Jo(e|seph) /i,
     /^Jon(athan)? /i,
     /^Josh(ua)? /i,
@@ -46,7 +48,8 @@ var PDRPlayers = (function () {
     /^Matt(hew)? /i,
     /^Mi(ke|chael) /i,
     /^Mitch(ell)? /i,
-    /^Nic(k|holas) /i,
+    /^Nat(e|han) /i,
+    /^Nic(ky?|holas) /i,
     /^Nori(chika)? /i,
     /^Rob(ert)? /i,
     /^Ste(vi?e|phen) /i,
@@ -62,8 +65,9 @@ var PDRPlayers = (function () {
     'Corey Brown':                /^(Corey|Philly) Brown/i,
     'Pierre-Alexandr Parenteau':  /^Pierre-Alexandre? Parenteau/i,
     'Carl Edwards Jr.':           /^(Carl|C\.J\.) Edwards( Jr\.)?/i,
-    'Raul Mondesi':               /^Raul (Adalberto )?Mondesi/i,
-    'Michael A. Taylor':          /^Michael (A\. )?Taylor/i
+    'Adalberto Mondesi':          /^(Raul )?Adalberto Mondesi/i,
+    'Michael A. Taylor':          /^Michael (A\. )?Taylor/i,
+    'Mychal Givens':              /^Mychal (Antonio )?Givens/i
   };
 
   var nameToRegex = function (name) {
