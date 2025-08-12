@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Pre-Draft Rankings for Yahoo Fantasy Sports",
   "version": "0.2.2",
   "description": "Copy and paste player names to auto-populate your pre-draft rankings for Yahoo Fantasy Sports.",
@@ -20,8 +20,13 @@
       "content.js"
     ]
   }],
-  "web_accessible_resources": [
-    "clipboard.html",
-    "img/icon16.png"
-  ]
+  "web_accessible_resources": [{
+    "resources": [
+      "clipboard.html",
+      "img/icon16.png"
+    ],
+    "matches": [
+      "*://*.fantasysports.yahoo.com/*"
+    ]
+  }]
 }
