@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const jasmine = require('gulp-jasmine');
 const zip = require('gulp-zip');
-const fs = require('fs-extra');
+const gulpClean = require('gulp-clean');
 
 gulp.task('lint', () =>
   gulp.src(['extension/**/*.js', '!extension/jquery-*.js', 'spec/**/*.js'])
@@ -23,7 +23,8 @@ gulp.task('build', () =>
 );
 
 gulp.task('clean', () =>
-  fs.removeSync('dist/')
+  gulp.src('dist/', {read: false, allowEmpty: true})
+    .pipe(gulpClean())
 );
 
-gulp.task('default', ['lint', 'test']);
+gulp.task('default', gulp.series('lint', 'test'));
