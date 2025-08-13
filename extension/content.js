@@ -1,10 +1,10 @@
 
-$.get(chrome.extension.getURL("clipboard.html"), function (html) {
+$.get(chrome.runtime.getURL("clipboard.html"), function (html) {
   $("#editprerank").prepend(html);
 
   $("#pdr_header").css(
     "background-image",
-    "url('" + chrome.extension.getURL("img/icon16.png") + "')"
+    "url('" + chrome.runtime.getURL("img/icon16.png") + "')"
   );
 
   //
