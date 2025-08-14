@@ -7,7 +7,7 @@
     "url": "https://github.com/hgoodman/yahoo-pre-draft.git"
   },
   "devDependencies": {
-    "eslint": "^9.33.0",
+    "eslint": "^8.38.0",
     "eslint-config-google": "^0.7.1",
     "gulp": "^5.0.1",
     "gulp-clean": "^0.4.0",
