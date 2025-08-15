@@ -33,3 +33,8 @@ This is a third-party extension, not supported by Yahoo!
 
 ### 0.2.2
 * Fix bug introduced in 0.2.1
+
+### 0.3.0
+* Update to manifest v3
+* Update icon with light background
+* Updates to build and test with newer versions of node.js
