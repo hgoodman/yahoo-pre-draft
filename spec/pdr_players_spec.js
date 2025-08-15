@@ -1,33 +1,33 @@
 
-var PDRPlayers = require('../extension/pdr_players.js');
+const PDRPlayers = require('../extension/pdr_players.js');
 
 describe('PDRPlayers', function () {
   describe('namesMatch()', function () {
     it('will match the same name to itself', function () {
-      var name = 'Clayton Kershaw';
+      const name = 'Clayton Kershaw';
       expect(PDRPlayers.namesMatch(name, name)).toBe(true);
       expect(PDRPlayers.namesMatch(name, 'Mookie Betts')).toBe(false);
     });
 
     it('will match the same name when it contains diacritics', function () {
-      var name = 'José Altuve';
+      const name = 'José Altuve';
       expect(PDRPlayers.namesMatch(name, name)).toBe(true);
     });
 
     it('will match on just the first part of a name', function () {
-      var n0 = 'Robert Griffin';
-      var n1 = 'Robert Griffin III';
+      const n0 = 'Robert Griffin';
+      const n1 = 'Robert Griffin III';
       expect(PDRPlayers.namesMatch(n0, n1)).toBe(true);
       expect(PDRPlayers.namesMatch(n1, n0)).toBe(true);
     });
 
     it('folds diacritical marks when comparing names', function () {
-      var n0 = 'Jose Altuve';
-      var n1 = 'José Altuve';
-      var n2 = 'Alex Colome';
-      var n3 = 'Álex Colomé';
-      var n4 = 'Thomas Häßler';
-      var n5 = 'Thomas Hassler';
+      const n0 = 'Jose Altuve';
+      const n1 = 'José Altuve';
+      const n2 = 'Alex Colome';
+      const n3 = 'Álex Colomé';
+      const n4 = 'Thomas Häßler';
+      const n5 = 'Thomas Hassler';
       expect(PDRPlayers.namesMatch(n0, n1)).toBe(true);
       expect(PDRPlayers.namesMatch(n1, n0)).toBe(true);
       expect(PDRPlayers.namesMatch(n2, n3)).toBe(true);
@@ -39,20 +39,20 @@ describe('PDRPlayers', function () {
     });
 
     it('is case-insensitive', function () {
-      var n0 = 'Jacob DeGrom';
-      var n1 = 'Jacob deGrom';
+      const n0 = 'Jacob DeGrom';
+      const n1 = 'Jacob deGrom';
       expect(PDRPlayers.namesMatch(n0, n1)).toBe(true);
     });
 
     it('equates hyphens with spaces when performing a comparison', function () {
-      var n0 = 'Seung-Hwan Oh';
-      var n1 = 'Seung Hwan Oh';
+      const n0 = 'Seung-Hwan Oh';
+      const n1 = 'Seung Hwan Oh';
       expect(PDRPlayers.namesMatch(n0, n1)).toBe(true);
       expect(PDRPlayers.namesMatch(n1, n0)).toBe(true);
     });
 
     it('matches alternate spellings', function () {
-      var namePairs = [
+      const namePairs = [
         // The football alternate spellings
         ['Ben Watson',                  'Benjamin Watson'],
         ['William Fuller',              'Will Fuller'],
@@ -95,7 +95,7 @@ describe('PDRPlayers', function () {
         ['Nick Delmonico',              'Nicky Delmonico'],
         ['Nathan Karns',                'Nate Karns']
       ];
-      for (var n of namePairs) {
+      for (const n of namePairs) {
         expect(PDRPlayers.namesMatch(n[0], n[1])).toBe(true);
         expect(PDRPlayers.namesMatch(n[1], n[0])).toBe(true);
       }

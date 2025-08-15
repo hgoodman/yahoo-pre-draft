@@ -1,6 +1,5 @@
-
-var PDRPlayers = (function () {
-  var asciiToDiacritic = {
+const PDRPlayers = (function () {
+  const asciiToDiacritic = {
     'A':  'ÀÁÂÄÃÅĀ',          'AE': 'Æ',
     'C':  'ÇĆČ',              'E':  'ÈÉÊËĒĖĘ',
     'I':  'ÎÏÍĪĮÌ',           'L':  'Ł',
@@ -17,21 +16,21 @@ var PDRPlayers = (function () {
     'z':  'žźż'
   };
 
-  var asciiLookup = { };
-  for (var ascii in asciiToDiacritic) {
-    var diacritic = asciiToDiacritic[ascii];
-    for (var i = 0; i < diacritic.length; i++) {
+  const asciiLookup = {};
+  for (const ascii in asciiToDiacritic) {
+    const diacritic = asciiToDiacritic[ascii];
+    for (let i = 0; i < diacritic.length; i++) {
       asciiLookup[diacritic[i]] = ascii;
     }
   }
 
-  var asciiFold = function (str) {
+  const asciiFold = function (str) {
     return str.replace(/[^\u0000-\u007f]/g, function (match) {
       return asciiLookup[match] || match;
     });
   };
 
-  var firstNamePatterns = [
+  const firstNamePatterns = [
     /^Alex(ander)? /i,
     /^Ben(jamin)? /i,
     /^Brad(ley)? /i,
@@ -61,7 +60,7 @@ var PDRPlayers = (function () {
   // These manually-created regular expressions supercede the alternate
   // spellings that used to be here. Regexes that just involve fuzzing common
   // first names or dealing with punctuation will be automatically generated.
-  var nameRegexes = {
+  const nameRegexes = {
     'Corey Brown':                /^(Corey|Philly) Brown/i,
     'Pierre-Alexandr Parenteau':  /^Pierre-Alexandre? Parenteau/i,
     'Carl Edwards Jr.':           /^(Carl|C\.J\.) Edwards( Jr\.)?/i,
@@ -70,11 +69,11 @@ var PDRPlayers = (function () {
     'Mychal Givens':              /^Mychal (Antonio )?Givens/i
   };
 
-  var nameToRegex = function (name) {
+  const nameToRegex = function (name) {
     if (!nameRegexes[name]) {
-      var pattern = name.replace(/([\-\.])/g, '[ \\$1]?');
-      var matched = false;
-      for (var f of firstNamePatterns) {
+      let pattern = name.replace(/([\-\.])/g, '[ \\$1]?');
+      let matched = false;
+      for (const f of firstNamePatterns) {
         if (pattern.match(f)) {
           pattern = pattern.replace(f, f.source);
           matched = true;
