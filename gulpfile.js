@@ -17,7 +17,7 @@ gulp.task('test', () =>
 );
 
 gulp.task('build', () =>
-  gulp.src('extension/**/*')
+  gulp.src('extension/**/*', {encoding: false})
     .pipe(zip('yahoo-pre-draft.zip'))
     .pipe(gulp.dest('dist'))
 );
